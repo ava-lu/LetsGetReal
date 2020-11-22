@@ -32,4 +32,10 @@ public class RealNumber {
     RealNumber product = new RealNumber(val);
     return product;
   }
+
+  public RealNumber divide(RealNumber other) {
+    double val = this.getValue() / other.getValue();
+    RealNumber quotient = new RealNumber(val);
+    return quotient;
+  }
 }
