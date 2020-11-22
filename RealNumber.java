@@ -38,4 +38,10 @@ public class RealNumber {
     RealNumber quotient = new RealNumber(val);
     return quotient;
   }
+
+  public RealNumber subtract(RealNumber other) {
+    double val = this.getValue() - other.getValue();
+    RealNumber difference = new RealNumber(val);
+    return difference;
+  }
 }
