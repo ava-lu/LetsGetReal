@@ -20,4 +20,10 @@ public class RealNumber {
     if (value < 0.00001) answer = true;
     return answer;
   }
+
+  public RealNumber add(RealNumber other) {
+    double val = this.getValue() + other.getValue();
+    RealNumber sum = new RealNumber(val);
+    return sum;
+  }
 }
