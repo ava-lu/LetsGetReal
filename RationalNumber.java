@@ -4,12 +4,16 @@ public class RationalNumber extends RealNumber {
   public RationalNumber(int nume, int deno) {
     super(0.0);
     if (deno == 0) {
-      nume = 0;
-      deno = 1;
+      numerator = 0;
+      denominator = 1;
     }
-    if (deno < 0) {
-      nume = nume * -1;
-      deno = deno * -1;
+    else if (deno < 0) {
+      numerator = nume * -1;
+      denominator = deno * -1;
+    }
+    else {
+      numerator = nume;
+      denominator = deno;
     }
   }
 
@@ -23,5 +27,10 @@ public class RationalNumber extends RealNumber {
 
   public int getDenominator() {
     return denominator;
+  }
+
+  public RationalNumber reciprocal() {
+    RationalNumber flip = new RationalNumber(this.getDenominator(), this.getNumerator());
+    return flip;
   }
 }
