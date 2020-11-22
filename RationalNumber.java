@@ -18,7 +18,7 @@ public class RationalNumber extends RealNumber {
   }
 
   public double getValue() {
-    return 0.0;
+    return (numerator/denominator);
   }
 
   public int getNumerator() {
@@ -48,4 +48,52 @@ public class RationalNumber extends RealNumber {
     String newstr = numerator+"/"+denominator;
     return newstr;
   }
+
+  public static int gcd(int a, int b) {
+    int answer = 0;
+    if (a<0 || b<0) {
+      a = Math.abs(a);
+      b = Math.abs(b);
+      if (a>=b) {
+        int remainder = a%b;
+        while (remainder != 0) {
+          a = b;
+          b = remainder;
+          remainder = a%b;
+        }
+        answer = b;
+      }
+      else {
+        int remainder = b%a;
+        while (remainder != 0) {
+          b = a;
+          a = remainder;
+          remainder = b%a;
+        }
+        answer = a;
+      }
+    }
+    else {
+      if (a>=b) {
+        int remainder = a%b;
+        while (remainder != 0) {
+          a = b;
+          b = remainder;
+          remainder = a%b;
+        }
+        answer = b;
+      }
+      else {
+        int remainder = b%a;
+        while (remainder != 0) {
+          b = a;
+          a = remainder;
+          remainder = b%a;
+        }
+        answer = a;
+      }
+    }
+    return answer;
+  }
+
 }
