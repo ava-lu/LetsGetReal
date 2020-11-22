@@ -49,7 +49,7 @@ public class RationalNumber extends RealNumber {
     return newstr;
   }
 
-  public static int gcd(int a, int b) {
+  private static int gcd(int a, int b) {
     int answer = 0;
     if (a<0 || b<0) {
       a = Math.abs(a);
@@ -94,6 +94,12 @@ public class RationalNumber extends RealNumber {
       }
     }
     return answer;
+  }
+
+  private void reduce() {
+    int c = gcd(numerator, denominator);
+    numerator = numerator / c;
+    denominator = denominator / c;
   }
 
 }
