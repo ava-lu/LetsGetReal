@@ -125,4 +125,12 @@ public class RationalNumber extends RealNumber {
     return sum;
   }
 
+  public RationalNumber subtract(RationalNumber other) {
+    int denom = this.getDenominator()*other.getDenominator();
+    RationalNumber diff = new RationalNumber(
+    (this.getNumerator()*other.getDenominator())-
+    (other.getNumerator()*this.getDenominator()), denom);
+    return diff;
+  }
+
 }
