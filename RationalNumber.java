@@ -117,4 +117,12 @@ public class RationalNumber extends RealNumber {
     return quotient;
   }
 
+  public RationalNumber add(RationalNumber other) {
+    int denom = this.getDenominator()*other.getDenominator();
+    RationalNumber sum = new RationalNumber(
+    (this.getNumerator()*other.getDenominator())+
+    (other.getNumerator()*this.getDenominator()), denom);
+    return sum;
+  }
+
 }
