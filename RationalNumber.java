@@ -43,4 +43,9 @@ public class RationalNumber extends RealNumber {
     }
     return answer;
   }
+
+  public String toString() {
+    String newstr = numerator+"/"+denominator;
+    return newstr;
+  }
 }
