@@ -2,24 +2,28 @@ public class RationalNumber extends RealNumber {
   private int numerator, denominator;
 
   public RationalNumber(int nume, int deno) {
-    super(0.0);
+    super(((double) nume) / deno);
     if (deno == 0) {
       numerator = 0;
+      denominator = 1;
+    }
+    else if (nume == 0) {
       denominator = 1;
     }
     else if (deno < 0) {
       numerator = nume * -1;
       denominator = deno * -1;
+      this.reduce();
     }
     else {
       numerator = nume;
       denominator = deno;
+      this.reduce();
     }
-    this.reduce();
   }
 
   public double getValue() {
-    return (numerator/denominator);
+    return (((double)numerator)/denominator);
   }
 
   public int getNumerator() {
