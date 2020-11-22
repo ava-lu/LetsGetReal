@@ -30,7 +30,17 @@ public class RationalNumber extends RealNumber {
   }
 
   public RationalNumber reciprocal() {
-    RationalNumber flip = new RationalNumber(this.getDenominator(), this.getNumerator());
+    RationalNumber flip = new RationalNumber(
+    this.getDenominator(), this.getNumerator());
     return flip;
+  }
+
+  public boolean equals(RationalNumber other) {
+    boolean answer = false;
+    if (this.getNumerator() == other.getNumerator() &&
+    this.getDenominator() == other.getDenominator()) {
+      answer = true;
+    }
+    return answer;
   }
 }
