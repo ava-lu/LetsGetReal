@@ -15,6 +15,7 @@ public class RationalNumber extends RealNumber {
       numerator = nume;
       denominator = deno;
     }
+    this.reduce();
   }
 
   public double getValue() {
@@ -97,9 +98,16 @@ public class RationalNumber extends RealNumber {
   }
 
   private void reduce() {
-    int c = gcd(numerator, denominator);
+    int c = gcd(this.getNumerator(), this.getDenominator());
     numerator = numerator / c;
     denominator = denominator / c;
+  }
+
+  public RationalNumber multiply(RationalNumber other) {
+    RationalNumber product = new
+    RationalNumber(this.getNumerator()*other.getNumerator(),
+    this.getDenominator()*other.getDenominator());
+    return product;
   }
 
 }
