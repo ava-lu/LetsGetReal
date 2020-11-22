@@ -13,8 +13,10 @@ public class Tester {
 
     RationalNumber c = new RationalNumber(1, 3);
     RationalNumber d = new RationalNumber(2,5);
+    RationalNumber e = new RationalNumber(1, 3);
     System.out.println(d.reciprocal().getNumerator());
     System.out.println(d.reciprocal().getDenominator());
-
+    System.out.println(c.equals(d));
+    System.out.println(c.equals(e));
   }
 }
