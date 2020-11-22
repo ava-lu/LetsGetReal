@@ -26,4 +26,10 @@ public class RealNumber {
     RealNumber sum = new RealNumber(val);
     return sum;
   }
+
+  public RealNumber multiply(RealNumber other) {
+    double val = this.getValue() * other.getValue();
+    RealNumber product = new RealNumber(val);
+    return product;
+  }
 }
