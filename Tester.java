@@ -33,10 +33,13 @@ public class Tester {
     System.out.println(f.getDenominator());
     */
 
+    /*
     RationalNumber g = new RationalNumber(1, 2);
-    RationalNumber h = new RationalNumber (3, 4);
+    RationalNumber h = new RationalNumber (-3, 4);
     System.out.println(g.multiply(h));
     System.out.println(g.divide(h));
     System.out.println(g.add(h));
+    System.out.println(g.subtract(h));
+    */
   }
 }
