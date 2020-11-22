@@ -11,14 +11,20 @@ public class Tester {
     System.out.println(a.subtract(b));
     */
 
+    /*
     RationalNumber c = new RationalNumber(1, 3);
     RationalNumber d = new RationalNumber(2,5);
     RationalNumber e = new RationalNumber(1, 3);
+    System.out.println(d.getValue());
     System.out.println(d.reciprocal().getNumerator());
     System.out.println(d.reciprocal().getDenominator());
     System.out.println(c.equals(d));
     System.out.println(c.equals(e));
 
     System.out.println(c.toString());
+    */
+
+    System.out.println(RationalNumber.gcd(15, 10));
+    System.out.println(RationalNumber.gcd(-15,10));
   }
 }
