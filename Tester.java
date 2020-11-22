@@ -24,7 +24,18 @@ public class Tester {
     System.out.println(c.toString());
     */
 
-    System.out.println(RationalNumber.gcd(15, 10));
-    System.out.println(RationalNumber.gcd(-15,10));
+    //System.out.println(RationalNumber.gcd(15, 10));
+    //System.out.println(RationalNumber.gcd(-15,10));
+
+    /*
+    RationalNumber f = new RationalNumber(-2, -6);
+    System.out.println(f.getNumerator());
+    System.out.println(f.getDenominator());
+    */
+
+    RationalNumber g = new RationalNumber(1, 2);
+    RationalNumber h = new RationalNumber (-3, 4);
+    System.out.println(g.multiply(h).getNumerator());
+    System.out.println(g.multiply(h).getDenominator());
   }
 }
