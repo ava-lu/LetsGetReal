@@ -110,4 +110,11 @@ public class RationalNumber extends RealNumber {
     return product;
   }
 
+  public RationalNumber divide(RationalNumber other) {
+    RationalNumber quotient = new
+    RationalNumber(this.getNumerator()*other.getDenominator(),
+    this.getDenominator()*other.getNumerator());
+    return quotient;
+  }
+
 }
