@@ -37,5 +37,7 @@ public class Tester {
     RationalNumber h = new RationalNumber (-3, 4);
     System.out.println(g.multiply(h).getNumerator());
     System.out.println(g.multiply(h).getDenominator());
+    System.out.println(g.divide(h).getNumerator());
+    System.out.println(g.divide(h).getDenominator());
   }
 }
