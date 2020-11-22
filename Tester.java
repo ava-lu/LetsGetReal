@@ -18,5 +18,7 @@ public class Tester {
     System.out.println(d.reciprocal().getDenominator());
     System.out.println(c.equals(d));
     System.out.println(c.equals(e));
+
+    System.out.println(c.toString());
   }
 }
