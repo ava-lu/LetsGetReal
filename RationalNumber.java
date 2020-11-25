@@ -1,13 +1,14 @@
-public class RationalNumber extends RealNumber {
+public class RationalNumber extends Number {
   private int numerator, denominator;
 
   public RationalNumber(int nume, int deno) {
-    super(((double) nume) / deno);
+    //super(((double) nume) / deno);
     if (deno == 0) {
       numerator = 0;
       denominator = 1;
     }
     else if (nume == 0) {
+      numerator = 0;
       denominator = 1;
     }
     else if (deno < 0) {
@@ -50,7 +51,12 @@ public class RationalNumber extends RealNumber {
   }
 
   public String toString() {
-    String newstr = numerator+"/"+denominator;
+    String newstr = "";
+    if (numerator == 0) newstr = "0";
+    else if (denominator == 1) newstr = newstr + numerator;
+    else {
+      newstr = numerator+"/"+denominator;
+    }
     return newstr;
   }
 
